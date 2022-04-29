@@ -1,4 +1,5 @@
 import React from 'react';
+import Book from './Book';
 
 const Books = () => {
   const books = [];
@@ -8,9 +9,10 @@ const Books = () => {
       <ul>
         { books.length > 0
           ? books.map((book) => (
-            <li key={book.id}>
-              {book.title}
-            </li>
+            <Book
+              key={book.id}
+              book={book}
+            />
           ))
           : ''}
       </ul>
