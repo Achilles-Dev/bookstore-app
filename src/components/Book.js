@@ -6,7 +6,7 @@ const Book = (props) => {
   return (
     <div>
       <li>
-        {book.title}
+        {`${book.title} by ${book.author}`}
       </li>
       <button type="button">Remove</button>
     </div>

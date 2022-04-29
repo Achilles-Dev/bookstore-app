@@ -2,7 +2,11 @@ import React from 'react';
 import Book from './Book';
 
 const Books = () => {
-  const books = [];
+  const books = [{
+    id: '1',
+    title: '1st',
+    author: 'Solo',
+  }];
 
   return (
     <div className="books-container">
