@@ -31,5 +31,4 @@ export const removeBook = (bookId) => ({
   payload: bookId,
 });
 
-
 export default booksReducer;
