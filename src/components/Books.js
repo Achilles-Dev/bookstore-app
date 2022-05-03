@@ -4,7 +4,7 @@ import Book from './Book';
 import InputBook from './InputBook';
 
 const Books = () => {
-  const books = useSelector((state) => state.books);
+  const books = useSelector((state) => state.books.books);
 
   return (
     <div className="books-container">
