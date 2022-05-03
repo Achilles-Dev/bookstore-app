@@ -2,7 +2,23 @@ const ADD_BOOK = 'bookstore-app/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore-app/books/REMOVE_BOOK';
 
 const initialState = {
-  books: [],
+  books: [
+    {
+      id: '1',
+      author: 'Solo',
+      title: 'First book',
+    },
+    {
+      id: '2',
+      author: 'Solo 2',
+      title: 'Second book',
+    },
+    {
+      id: '3',
+      author: 'Solo 3',
+      title: 'Third book',
+    },
+  ],
 };
 
 const booksReducer = (state = initialState, action) => {
@@ -15,13 +31,13 @@ const booksReducer = (state = initialState, action) => {
     case REMOVE_BOOK:
       return {
         ...state,
-        books: state.books.filter((book) => book !== action.payload),
+        books: state.books.filter((book) => book.id !== action.payload),
       };
     default: return state;
   }
 };
 
-export const addBooks = (book) => ({
+export const addBook = (book) => ({
   type: ADD_BOOK,
   payload: book,
 });
