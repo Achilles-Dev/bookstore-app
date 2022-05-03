@@ -7,9 +7,9 @@ const appId = 'XlJOxZFZuoUCMHkjVObL';
 const API = {
   getBooks: (success) => {
     axios.get(`${baseURL}/apps/${appId}/books`)
-    .then(res => {
+      .then((res) => {
         success(res);
-    })
+      });
   },
 
   addBook: (book, success) => {
@@ -17,19 +17,19 @@ const API = {
       item_id: book.id,
       title: book.title,
       author: book.author,
-      category: 'First category',
+      category: book.category,
     })
-    .then(res => {
+      .then((res) => {
         success(res);
-    })
+      });
   },
 
   removeBook: (bookId, success) => {
-    axios.get(`${baseURL}/apps/${appId}/books/${bookId}`)
-    .then(res => {
+    axios.delete(`${baseURL}/apps/${appId}/books/${bookId}`)
+      .then((res) => {
         success(res);
-    })
-  }
-}
+      });
+  },
+};
 
 export default API;

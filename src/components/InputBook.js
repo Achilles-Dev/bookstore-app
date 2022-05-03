@@ -7,6 +7,7 @@ const InputBook = () => {
   const [book, setBook] = useState({
     title: '',
     author: '',
+    category: 'First category',
   });
   const dispatch = useDispatch();
   const onTitleChange = (e) => setBook({ ...book, title: e.target.value });
