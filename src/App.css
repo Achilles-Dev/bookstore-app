@@ -1,3 +1,42 @@
 .App {
-  text-align: center;
+  background-color: #fafafa;
+  font-family: Montserrat;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  background: #fff;
+  padding: 20px 100px;
+  gap: 45px;
+  align-items: center;
+}
+.header .main-title {
+  display: flex;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
+}
+
+.header .header-links {
+  display: flex;
+  gap: 40px;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
 }
