@@ -1,28 +1,27 @@
+import API from '../services/api';
+
 const ADD_BOOK = 'bookstore-app/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore-app/books/REMOVE_BOOK';
+const GET_BOOKS = 'bookstore-app/books/GET_BOOKS';
 
 const initialState = {
-  books: [
-    {
-      id: '1',
-      author: 'Solo',
-      title: 'First book',
-    },
-    {
-      id: '2',
-      author: 'Solo 2',
-      title: 'Second book',
-    },
-    {
-      id: '3',
-      author: 'Solo 3',
-      title: 'Third book',
-    },
-  ],
+  books: [],
 };
 
 const booksReducer = (state = initialState, action) => {
+  let books;
   switch (action.type) {
+    case GET_BOOKS:
+      books = Object.keys(action.payload).map((id) => ({
+        id,
+        title: action.payload[id][0].title,
+        author: action.payload[id][0].author,
+        category: action.payload[id][0].category,
+      }));
+      return {
+        ...state,
+        books,
+      };
     case ADD_BOOK:
       return {
         ...state,
@@ -37,14 +36,31 @@ const booksReducer = (state = initialState, action) => {
   }
 };
 
-export const addBook = (book) => ({
-  type: ADD_BOOK,
-  payload: book,
-});
+export const getBooks = () => (dispatch) => {
+  API.getBooks((res) => {
+    dispatch({
+      type: GET_BOOKS,
+      payload: res.data,
+    });
+  });
+};
 
-export const removeBook = (bookId) => ({
-  type: REMOVE_BOOK,
-  payload: bookId,
-});
+export const addBook = (book) => (dispatch) => {
+  API.addBook(book, () => {
+    dispatch({
+      type: ADD_BOOK,
+      payload: book,
+    });
+  });
+};
+
+export const removeBook = (bookId) => (dispatch) => {
+  API.removeBook(bookId, () => {
+    dispatch({
+      type: REMOVE_BOOK,
+      payload: bookId,
+    });
+  });
+};
 
 export default booksReducer;
