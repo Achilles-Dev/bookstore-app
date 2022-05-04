@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { ReactComponent as UserLogo } from './male_user_icon.svg';
 
 const Header = () => (
   <div className="header">
@@ -14,6 +15,7 @@ const Header = () => (
         </li>
       </ul>
     </nav>
+    <span className="user-logo"><UserLogo /></span>
   </div>
 );
 

@@ -12,10 +12,18 @@ const Book = (props) => {
 
   return (
     <div>
-      <li>
-        {`${book.title} by ${book.author}`}
+      <li className="book-card">
+        <ul>
+          <li className="book-category">{book.category}</li>
+          <li className="book-title">{book.title}</li>
+          <li className="book-author">{book.author}</li>
+        </ul>
+        <>
+          <button type="button">Comments</button>
+          <button type="button" onClick={handleClick}>Remove</button>
+          <button type="button">Edit</button>
+        </>
       </li>
-      <button type="button" onClick={handleClick}>Remove</button>
     </div>
   );
 };

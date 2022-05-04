@@ -1,6 +1,11 @@
 .App {
   background-color: #fafafa;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
 }
 
 li {
@@ -17,7 +22,9 @@ a {
   padding: 20px 100px;
   gap: 45px;
   align-items: center;
+  flex-wrap: wrap;
 }
+
 .header .main-title {
   display: flex;
   font-size: 30px;
@@ -39,4 +46,72 @@ a {
   line-height: normal;
   letter-spacing: 1.9px;
   color: #121212;
+}
+
+.header .user-logo {
+  border: 1px solid #e8e8e8;
+  padding: 14px;
+  border-radius: 50%;
+  margin-left: auto !important;
+}
+
+/* Books */
+.books-container {
+  margin: 0;
+  padding: 30px 100px;
+}
+
+.books-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.books-card div {
+  padding: 32px 27px;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  background: #fff;
+}
+
+.books-card .book-card .book-category {
+  color: #121212;
+  font-size: 14px;
+  font-weight: bold;
+  opacity: 0.5;
+  margin-bottom: 4px;
+}
+
+.books-card .book-card .book-title {
+  color: #121212;
+  font-family: RobotoSlab;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: -0.2px;
+}
+
+.books-card .book-card .book-author {
+  color: #4386bf;
+  font-family: RobotoSlab;
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 18px;
+}
+
+.books-card .book-card button {
+  font-family: RobotoSlab;
+  font-size: 14px;
+  font-weight: 300;
+  color: #4386bf;
+  padding: 0;
+  margin-right: 10px;
+  padding-right: 14px;
+  border: none;
+  background: #fff;
+  border-right: 1px solid #e8e8e8;
+  cursor: pointer;
+}
+
+.books-card .book-card button:last-child {
+  border-right: none;
 }
