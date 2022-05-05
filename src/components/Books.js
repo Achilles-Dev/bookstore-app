@@ -16,7 +16,7 @@ const Books = () => {
 
   return (
     <div className="books-container">
-      <ul>
+      <ul className="books-card d-col-flex">
         { newBooks.length > 0
           ? newBooks.map((book) => (
             <Book

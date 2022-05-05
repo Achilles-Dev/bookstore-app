@@ -10,12 +10,41 @@ const Book = (props) => {
     dispatch(removeBook(book.id));
   };
 
+  const progress = `${Math.floor(Math.random() * 90) + 10}%`;
+  const circleProgress = {
+    backgroundImage: `conic-gradient(#379cf6 ${progress}, #e8e8e8 0)`,
+  };
+
   return (
-    <div>
-      <li>
-        {`${book.title} by ${book.author}`}
+    <div className="book-card-container d-flex grey-border">
+      <li className="book-card">
+        <ul>
+          <li className="book-category black-2">{book.category}</li>
+          <li className="book-title black-2">{book.title}</li>
+          <li className="book-author blue-2">{book.author}</li>
+        </ul>
+        <>
+          <button type="button">Comments</button>
+          <button type="button" onClick={handleClick}>Remove</button>
+          <button type="button">Edit</button>
+        </>
       </li>
-      <button type="button" onClick={handleClick}>Remove</button>
+
+      <div className="progress-circle d-flex">
+        <div className="circle" style={circleProgress}>
+          <div className="inner" />
+        </div>
+        <div className="progress d-col-flex">
+          <h3 className="progress-value black-2">{progress}</h3>
+          <p className="progress-completed black-2">Completed</p>
+        </div>
+      </div>
+
+      <div className="progress-update d-col-flex black-2">
+        <h3>CURRENT CHAPTER</h3>
+        <h4>Chapter 5</h4>
+        <button type="button">UPDATE PROGRESS</button>
+      </div>
     </div>
   );
 };
