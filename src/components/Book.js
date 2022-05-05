@@ -16,12 +16,12 @@ const Book = (props) => {
   };
 
   return (
-    <div className="book-card-container">
+    <div className="book-card-container d-flex grey-border">
       <li className="book-card">
         <ul>
-          <li className="book-category">{book.category}</li>
-          <li className="book-title">{book.title}</li>
-          <li className="book-author">{book.author}</li>
+          <li className="book-category black-2">{book.category}</li>
+          <li className="book-title black-2">{book.title}</li>
+          <li className="book-author blue-2">{book.author}</li>
         </ul>
         <>
           <button type="button">Comments</button>
@@ -30,17 +30,17 @@ const Book = (props) => {
         </>
       </li>
 
-      <div className="progress-circle">
+      <div className="progress-circle d-flex">
         <div className="circle" style={circleProgress}>
           <div className="inner" />
         </div>
-        <div className="progress">
-          <h3 className="progress-value">{progress}</h3>
-          <p className="progress-completed">Completed</p>
+        <div className="progress d-col-flex">
+          <h3 className="progress-value black-2">{progress}</h3>
+          <p className="progress-completed black-2">Completed</p>
         </div>
       </div>
 
-      <div className="progress-update">
+      <div className="progress-update d-col-flex black-2">
         <h3>CURRENT CHAPTER</h3>
         <h4>Chapter 5</h4>
         <button type="button">UPDATE PROGRESS</button>

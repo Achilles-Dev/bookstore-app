@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;500;600;700&display=swap');
+
 .App {
   background-color: #fafafa;
   font-family: Montserrat, sans-serif;
@@ -21,8 +24,29 @@ a {
   text-decoration: none;
 }
 
-.header {
+.grey-border {
+  border: 1px solid #e8e8e8;
+}
+
+.d-flex {
   display: flex;
+}
+
+.d-col-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.black-2 {
+  color: #121212;
+}
+
+.blue-2 {
+  color: #4386bf;
+}
+
+/* Header */
+.header {
   background: #fff;
   padding: 20px 100px;
   gap: 45px;
@@ -31,30 +55,20 @@ a {
 }
 
 .header .main-title {
-  display: flex;
   font-size: 30px;
   font-weight: bold;
   font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: #0290ff;
 }
 
 .header .header-links {
-  display: flex;
   gap: 40px;
   font-size: 13px;
   font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: 1.9px;
-  color: #121212;
 }
 
 .header .user-logo {
-  border: 1px solid #e8e8e8;
   padding: 14px;
   border-radius: 50%;
   margin-left: auto !important;
@@ -67,67 +81,41 @@ a {
 }
 
 .books-card {
-  display: flex;
-  flex-direction: column;
   gap: 15px;
 }
 
-.books-card .book-card-container {
-  display: flex;
+.book-card-container {
   padding: 25px 27px;
   border-radius: 4px;
-  border: 1px solid #e8e8e8;
   background: #fff;
   align-items: center;
 }
 
-.books-card .book-card {
+.book-card {
   width: 45%;
+  font-family: Roboto Slab, sans-serif;
 }
 
-.books-card .book-card .book-category {
-  color: #121212;
+.book-card .book-category {
   font-size: 14px;
   font-weight: bold;
   opacity: 0.5;
   margin-bottom: 4px;
 }
 
-.books-card .book-card .book-title {
-  color: #121212;
-  font-family: RobotoSlab, sans-serif;
+.book-card .book-title {
   font-size: 22px;
   font-weight: bold;
   letter-spacing: -0.2px;
 }
 
-.books-card .book-card .book-author {
-  color: #4386bf;
-  font-family: RobotoSlab, sans-serif;
+.book-card .book-author {
   font-size: 14px;
   font-weight: 300;
   margin-bottom: 18px;
 }
 
-/* Progress button */
-.progress-update button {
-  margin-top: 20px;
-  width: 184px;
-  height: 33px;
-  font-family: RobotoSlab, sans-serif;
-  font-size: 13px;
-  font-weight: 300;
-  padding: 7px 20px;
-  border-radius: 3px;
-  letter-spacing: 0.5px;
-  text-align: center;
-  border: none;
-  background-color: #0290ff;
-  color: #fff;
-}
-
-.books-card .book-card button {
-  font-family: RobotoSlab, sans-serif;
+.book-card button {
   font-size: 14px;
   font-weight: 300;
   color: #4386bf;
@@ -140,12 +128,27 @@ a {
   cursor: pointer;
 }
 
-.books-card .book-card button:last-child {
+/* Progress button */
+.progress-update button {
+  margin-top: 20px;
+  width: 184px;
+  height: 33px;
+  font-size: 13px;
+  padding: 7px 20px;
+  border-radius: 3px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  border: none;
+  background-color: #0290ff;
+  color: #fff;
+}
+
+.book-card button:last-child {
   border-right: none;
 }
 
+/* Progress */
 .progress-circle {
-  display: flex;
   gap: 20px;
   align-items: center;
   width: 25%;
@@ -153,7 +156,7 @@ a {
   margin-right: 30px;
 }
 
-.progress-circle .circle {
+.circle {
   position: relative;
   width: 68px;
   height: 68px;
@@ -163,7 +166,7 @@ a {
   overflow: hidden;
 }
 
-.progress-circle .circle .inner {
+.circle .inner {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -174,49 +177,34 @@ a {
   border-radius: 50%;
 }
 
-.progress-circle .progress {
-  display: flex;
-  flex-direction: column;
-}
-
-.progress-circle .progress .progress-value {
+.progress .progress-value {
   font-size: 32px;
-  color: #121212;
   font-weight: normal;
 }
 
-.progress-circle .progress .progress-completed {
+.progress .progress-completed {
   opacity: 0.5;
   font-size: 14px;
-  color: #121212;
 }
 
 .progress-update {
-  display: flex;
-  flex-direction: column;
+  font-family: Roboto Slab, sans-serif;
   width: 27%;
   padding: 0 20px;
   gap: 7px;
+  font-weight: 300;
 }
 
 .progress-update h3 {
   opacity: 0.5;
-  font-family: RobotoSlab, sans-serif;
   font-size: 13px;
-  font-weight: 300;
-  color: #121212;
 }
 
 .progress-update h4 {
-  font-family: RobotoSlab, sans-serif;
   font-size: 16px;
-  font-weight: 300;
-  color: #121212;
 }
 
 .form-section {
-  display: flex;
-  flex-direction: column;
   margin-top: 40px;
   border-top: 1px solid #e8e8e8;
   padding: 29px 0;
@@ -231,7 +219,6 @@ a {
 }
 
 .form-container {
-  display: flex;
   gap: 5%;
 }
 
@@ -239,12 +226,10 @@ a {
 .form-container .input-author {
   height: 18px;
   padding: 13px 17px;
-  border: 1px solid #e8e8e8;
   border-radius: 4px;
   background-color: #fff;
   font-size: 16px;
   letter-spacing: -0.15px;
-  color: #121212;
 }
 
 .form-container .input-title {
@@ -256,7 +241,7 @@ a {
 }
 
 .form-container .input-submit {
-  font-family: RobotoSlab, sans-serif;
+  font-family: Roboto Slab, sans-serif;
   font-size: 13px;
   width: 20%;
   height: auto;

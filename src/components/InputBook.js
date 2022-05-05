@@ -24,12 +24,12 @@ const InputBook = () => {
   };
 
   return (
-    <div className="form-section">
+    <div className="form-section d-col-flex">
       <h2 className="form-title">ADD NEW BOOK</h2>
-      <form className="form-container">
+      <form className="form-container d-flex">
         <input
           type="text"
-          className="input-title"
+          className="input-title grey-border black-2"
           placeholder="Book title"
           name="title"
           value={book.title}
@@ -37,7 +37,7 @@ const InputBook = () => {
         />
         <input
           type="text"
-          className="input-author"
+          className="input-author grey-border black-2"
           placeholder="Add author..."
           name="author"
           value={book.author}
