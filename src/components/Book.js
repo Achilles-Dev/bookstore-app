@@ -10,8 +10,13 @@ const Book = (props) => {
     dispatch(removeBook(book.id));
   };
 
+  const progress = `${Math.floor(Math.random() * 90) + 10}%`;
+  const circleProgress = {
+    backgroundImage: `conic-gradient(#379cf6 ${progress}, #e8e8e8 0)`,
+  };
+
   return (
-    <div>
+    <div className="book-card-container">
       <li className="book-card">
         <ul>
           <li className="book-category">{book.category}</li>
@@ -24,6 +29,22 @@ const Book = (props) => {
           <button type="button">Edit</button>
         </>
       </li>
+
+      <div className="progress-circle">
+        <div className="circle" style={circleProgress}>
+          <div className="inner" />
+        </div>
+        <div className="progress">
+          <h3 className="progress-value">{progress}</h3>
+          <p className="progress-completed">Completed</p>
+        </div>
+      </div>
+
+      <div className="progress-update">
+        <h3>CURRENT CHAPTER</h3>
+        <h4>Chapter 5</h4>
+        <button type="button">UPDATE PROGRESS</button>
+      </div>
     </div>
   );
 };

@@ -24,34 +24,37 @@ const InputBook = () => {
   };
 
   return (
-    <form className="form-container">
-      <input
-        type="text"
-        className="input-text"
-        placeholder="Add title..."
-        name="title"
-        value={book.title}
-        onChange={onTitleChange}
-      />
-      <input
-        type="text"
-        className="input-text"
-        placeholder="Add author..."
-        name="author"
-        value={book.author}
-        onChange={onAuthorChange}
-      />
-      <button
-        type="submit"
-        className="input-submit"
-        onClick={(e) => {
-          e.preventDefault();
-          handleClick();
-        }}
-      >
-        ADD BOOK
-      </button>
-    </form>
+    <div className="form-section">
+      <h2 className="form-title">ADD NEW BOOK</h2>
+      <form className="form-container">
+        <input
+          type="text"
+          className="input-title"
+          placeholder="Book title"
+          name="title"
+          value={book.title}
+          onChange={onTitleChange}
+        />
+        <input
+          type="text"
+          className="input-author"
+          placeholder="Add author..."
+          name="author"
+          value={book.author}
+          onChange={onAuthorChange}
+        />
+        <button
+          type="submit"
+          className="input-submit"
+          onClick={(e) => {
+            e.preventDefault();
+            handleClick();
+          }}
+        >
+          ADD BOOK
+        </button>
+      </form>
+    </div>
   );
 };
 
