@@ -1,56 +1,43 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Bookstore App
 
-> Description the project.
+> This apllication contains a list of books with their completion stages.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
+- JavaScript
+- React
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
-
-### Setup
+1. Clone Repository 
+  
+  Run
+   ```
+   git clone git@github.com:Achilles-Dev/react-todo-app.git
+   ```
 
 ### Install
 
-### Usage
-
-### Run tests
-
-### Deployment
-
+  Run
+   ```
+   npm install 
+   ```
 
 
 ## Authors
 
-👤 **Author1**
+👤 **Solomon Hagan**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Achilles-Dev](https://github.com/Achilles-Dev/)
+- Twitter: [@SoloAchilles](https://twitter.com/SoloAchilles/)
+- LinkedIn: [Solomon Hagan](https://www.linkedin.com/in/solomon-hagan-b51693138/)
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 
